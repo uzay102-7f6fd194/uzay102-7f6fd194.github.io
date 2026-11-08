@@ -1,0 +1,1351 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>人人视频官网-人人视频在线观看_人人视频官网首页入口</title>
+  <meta name="description" content="人人视频官网提供海量影视内容在线观看，涵盖热门剧集、电影、综艺、动漫等。人人视频官网首页入口清晰，分类筛选便捷，支持追剧收藏与更新提醒，是影视爱好者值得收藏的内容专题页。">
+  <meta name="keywords" content="人人视频官网,人人视频在线观看,人人视频官网首页,人人视频影视剧,人人视频入口">
+  <style>
+    :root {
+      --bg: #f5f7fb;
+      --surface: #ffffff;
+      --surface-soft: #f0f3f9;
+      --text: #1a1f2e;
+      --text-secondary: #4a5268;
+      --text-muted: #7e889e;
+      --border: #e2e8f0;
+      --accent: #3b5bdb;
+      --accent-soft: #e8edff;
+      --accent-hover: #2f4bc0;
+      --radius: 16px;
+      --radius-sm: 10px;
+      --shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+      --shadow-hover: 0 16px 32px rgba(0, 0, 0, 0.08);
+      --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+      --max-width: 1200px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* 导航 */
+    .nav-bar {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(12px);
+      background: rgba(255, 255, 255, 0.92);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--accent);
+      letter-spacing: -0.3px;
+    }
+
+    .logo-mark {
+      width: 32px;
+      height: 32px;
+      background: linear-gradient(135deg, var(--accent), #6c8cff);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 1.1rem;
+      font-weight: 800;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      padding: 6px 14px;
+      border-radius: 40px;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      transition: all 0.2s;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      background: var(--accent-soft);
+      color: var(--accent);
+    }
+
+    /* Banner */
+    .hero {
+      background: linear-gradient(120deg, #1e2b5c 0%, #2d3f7a 60%, #3b5bdb 100%);
+      color: #fff;
+      padding: 48px 0 56px;
+      margin-bottom: 40px;
+      border-radius: 0 0 32px 32px;
+    }
+
+    .hero-content {
+      max-width: 780px;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 6px 16px;
+      border-radius: 40px;
+      font-size: 0.82rem;
+      letter-spacing: 0.5px;
+      margin-bottom: 18px;
+      font-weight: 500;
+    }
+
+    .hero h1 {
+      font-size: 2.6rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 16px;
+      letter-spacing: -0.5px;
+    }
+
+    .hero-desc {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      margin-bottom: 28px;
+      line-height: 1.7;
+    }
+
+    .hero-search {
+      display: flex;
+      background: #fff;
+      border-radius: 60px;
+      padding: 6px 6px 6px 24px;
+      max-width: 520px;
+      margin-bottom: 28px;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+    }
+
+    .hero-search input {
+      flex: 1;
+      border: none;
+      outline: none;
+      font-size: 0.95rem;
+      color: var(--text);
+      background: transparent;
+      min-width: 0;
+    }
+
+    .hero-search input::placeholder {
+      color: var(--text-muted);
+    }
+
+    .hero-search button {
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      padding: 12px 28px;
+      border-radius: 60px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: background 0.2s;
+      white-space: nowrap;
+    }
+
+    .hero-search button:hover {
+      background: var(--accent-hover);
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .hero-tags a {
+      background: rgba(255, 255, 255, 0.12);
+      padding: 7px 18px;
+      border-radius: 40px;
+      font-size: 0.85rem;
+      transition: background 0.2s;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      font-weight: 500;
+    }
+
+    .hero-tags a:hover {
+      background: rgba(255, 255, 255, 0.22);
+    }
+
+    /* 通用 section */
+    .section {
+      margin-bottom: 52px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 22px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .section-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .section-title::before {
+      content: '';
+      display: inline-block;
+      width: 5px;
+      height: 24px;
+      background: var(--accent);
+      border-radius: 4px;
+    }
+
+    .section-more {
+      font-size: 0.9rem;
+      color: var(--accent);
+      font-weight: 500;
+      padding: 4px 12px;
+      border-radius: 40px;
+      background: var(--accent-soft);
+      transition: background 0.2s;
+    }
+
+    .section-more:hover {
+      background: #dce4ff;
+    }
+
+    /* 简介 */
+    .intro-box {
+      background: var(--surface);
+      border-radius: var(--radius);
+      padding: 32px 36px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      line-height: 1.8;
+      color: var(--text-secondary);
+      font-size: 0.98rem;
+    }
+
+    .intro-box p {
+      margin-bottom: 14px;
+    }
+
+    .intro-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* 卡片网格 */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .content-card {
+      background: var(--surface);
+      border-radius: var(--radius);
+      padding: 20px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .content-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .card-cover {
+      height: 120px;
+      border-radius: var(--radius-sm);
+      margin-bottom: 14px;
+      background: linear-gradient(135deg, #c3d0ff, #e0e7ff);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .card-cover.alt1 {
+      background: linear-gradient(135deg, #ffd8c3, #ffe8dd);
+      color: #c05621;
+    }
+
+    .card-cover.alt2 {
+      background: linear-gradient(135deg, #b8e6d0, #d9f2e6);
+      color: #2f7a5a;
+    }
+
+    .card-cover.alt3 {
+      background: linear-gradient(135deg, #e0c3fc, #f0e0ff);
+      color: #6b3fa0;
+    }
+
+    .card-cover.alt4 {
+      background: linear-gradient(135deg, #c3e0ff, #ddecff);
+      color: #2b6cb0;
+    }
+
+    .card-cover.alt5 {
+      background: linear-gradient(135deg, #fde2e4, #ffe5e7);
+      color: #b8324a;
+    }
+
+    .card-title {
+      font-weight: 700;
+      font-size: 1.05rem;
+      margin-bottom: 6px;
+      color: var(--text);
+    }
+
+    .card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 10px;
+    }
+
+    .card-tag {
+      font-size: 0.72rem;
+      padding: 3px 10px;
+      border-radius: 30px;
+      background: var(--surface-soft);
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+
+    .card-tag.hot {
+      background: #fff0e5;
+      color: #c05621;
+    }
+
+    .card-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 12px;
+      flex: 1;
+    }
+
+    .card-meta {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border);
+      padding-top: 10px;
+    }
+
+    .card-meta span:first-child {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    /* 更新列表 */
+    .update-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      background: var(--surface);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .update-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 24px;
+      border-bottom: 1px solid var(--border);
+      transition: background 0.15s;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .update-item:last-child {
+      border-bottom: none;
+    }
+
+    .update-item:hover {
+      background: var(--surface-soft);
+    }
+
+    .update-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .update-name {
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--text);
+    }
+
+    .update-desc {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .update-time {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+
+    .update-tag {
+      font-size: 0.7rem;
+      padding: 2px 10px;
+      border-radius: 20px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    /* 分类入口 */
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .category-item {
+      background: var(--surface);
+      border-radius: var(--radius);
+      padding: 24px 20px;
+      text-align: center;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      transition: transform 0.2s, box-shadow 0.2s;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+    }
+
+    .category-item:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-hover);
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .category-icon {
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    /* 深度解析正文 */
+    .article-body {
+      background: var(--surface);
+      border-radius: var(--radius);
+      padding: 36px 40px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      line-height: 1.9;
+      color: var(--text-secondary);
+      font-size: 0.98rem;
+    }
+
+    .article-body h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin: 24px 0 12px;
+      color: var(--text);
+    }
+
+    .article-body h3:first-child {
+      margin-top: 0;
+    }
+
+    .article-body p {
+      margin-bottom: 16px;
+    }
+
+    .article-body ul {
+      margin: 12px 0 16px 20px;
+      color: var(--text-secondary);
+    }
+
+    .article-body li {
+      margin-bottom: 6px;
+    }
+
+    /* FAQ */
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .faq-card {
+      background: var(--surface);
+      border-radius: var(--radius);
+      padding: 22px 24px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+    }
+
+    .faq-q {
+      font-weight: 700;
+      font-size: 0.98rem;
+      margin-bottom: 8px;
+      color: var(--text);
+      display: flex;
+      gap: 8px;
+    }
+
+    .faq-q span {
+      color: var(--accent);
+      font-size: 1.1rem;
+    }
+
+    .faq-a {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      padding-left: 26px;
+    }
+
+    /* 评论 */
+    .comment-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px;
+    }
+
+    .comment-card {
+      background: var(--surface);
+      border-radius: var(--radius);
+      padding: 18px 20px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      transition: transform 0.2s;
+    }
+
+    .comment-card:hover {
+      transform: translateY(-2px);
+    }
+
+    .comment-user {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .comment-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #c3d0ff, #e0e7ff);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: var(--accent);
+      font-size: 0.85rem;
+    }
+
+    .comment-name {
+      font-weight: 600;
+      font-size: 0.88rem;
+    }
+
+    .comment-date {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+    }
+
+    .comment-text {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    /* 资讯 */
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 18px;
+    }
+
+    .news-card {
+      background: var(--surface);
+      border-radius: var(--radius);
+      padding: 22px 24px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      transition: transform 0.2s;
+    }
+
+    .news-card:hover {
+      transform: translateY(-3px);
+    }
+
+    .news-date {
+      font-size: 0.75rem;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .news-title {
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+
+    .news-summary {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* 页脚 */
+    .footer {
+      background: #1a1f2e;
+      color: #a9b3cc;
+      padding: 48px 0 32px;
+      margin-top: 60px;
+      border-radius: 32px 32px 0 0;
+    }
+
+    .footer-inner {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 36px;
+    }
+
+    .footer-brand {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: #fff;
+      margin-bottom: 12px;
+    }
+
+    .footer-desc {
+      font-size: 0.85rem;
+      line-height: 1.7;
+      color: #8892aa;
+    }
+
+    .footer-col h4 {
+      color: #fff;
+      font-size: 0.9rem;
+      margin-bottom: 14px;
+      font-weight: 600;
+    }
+
+    .footer-col a {
+      display: block;
+      font-size: 0.85rem;
+      color: #8892aa;
+      margin-bottom: 8px;
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover {
+      color: #fff;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #2d3447;
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 0.78rem;
+      color: #6b758c;
+    }
+
+    /* 响应式 */
+    @media (max-width: 900px) {
+      .footer-inner {
+        grid-template-columns: 1fr 1fr;
+        gap: 28px;
+      }
+      .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .faq-grid {
+        grid-template-columns: 1fr;
+      }
+      .hero h1 {
+        font-size: 2rem;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .nav-links {
+        display: none;
+      }
+      .hero {
+        padding: 32px 0 40px;
+        border-radius: 0 0 24px 24px;
+      }
+      .hero h1 {
+        font-size: 1.6rem;
+      }
+      .hero-desc {
+        font-size: 0.95rem;
+      }
+      .hero-search {
+        flex-direction: column;
+        background: transparent;
+        box-shadow: none;
+        padding: 0;
+        gap: 10px;
+      }
+      .hero-search input {
+        background: #fff;
+        padding: 14px 20px;
+        border-radius: 60px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+      .hero-search button {
+        width: 100%;
+        padding: 14px;
+      }
+      .hero-tags a {
+        font-size: 0.78rem;
+        padding: 6px 14px;
+      }
+      .section-title {
+        font-size: 1.3rem;
+      }
+      .article-body {
+        padding: 24px 20px;
+      }
+      .intro-box {
+        padding: 24px 20px;
+      }
+      .footer-inner {
+        grid-template-columns: 1fr;
+      }
+      .card-grid {
+        grid-template-columns: 1fr;
+      }
+      .comment-grid {
+        grid-template-columns: 1fr;
+      }
+      .news-grid {
+        grid-template-columns: 1fr;
+      }
+      .update-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+      }
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+  <!-- 导航 -->
+  <nav class="nav-bar">
+    <div class="container nav-inner">
+      <div class="logo">
+        <span class="logo-mark">人</span>
+        <span>人人视频官网</span>
+      </div>
+      <div class="nav-links">
+        <a href="/#热门推荐">热门推荐</a>
+        <a href="/#最新更新">最新更新</a>
+        <a href="/#分类入口">分类入口</a>
+        <a href="/#深度解析">深度解析</a>
+        <a href="/#常见问题">常见问题</a>
+        <a href="/#用户评论">用户评论</a>
+        <a href="/#相关资讯">相关资讯</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Banner -->
+  <header class="hero">
+    <div class="container hero-content">
+      <div class="hero-badge">📺 影视内容聚合 · 每日更新</div>
+      <h1>人人视频官网 · 热门影视在线观看与追剧入口</h1>
+      <p class="hero-desc">
+        人人视频官网汇集热门剧集、电影、综艺、动漫等多元内容，提供清晰的分类筛选与更新追踪。
+        无论是想找一部下饭剧，还是追更最新番剧，这里都能快速定位。
+      </p>
+      <div class="hero-search">
+        <input type="search" placeholder="搜索剧名、演员、导演或关键词…" aria-label="搜索人人视频官网内容">
+        <button type="button">搜索</button>
+      </div>
+      <div class="hero-tags">
+        <a href="/#热门推荐">热播剧集</a>
+        <a href="/#最新更新">今日更新</a>
+        <a href="/#分类入口">高分电影</a>
+        <a href="/#分类入口">人气动漫</a>
+        <a href="/#分类入口">热门综艺</a>
+        <a href="/#深度解析">编辑精选</a>
+        <a href="/#相关资讯">影视动态</a>
+        <a href="/#用户评论">观众讨论</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- 内容简介 -->
+    <section class="section" id="内容简介">
+      <div class="section-header">
+        <h2 class="section-title">关于人人视频官网</h2>
+      </div>
+      <div class="intro-box">
+        <p>人人视频官网是面向影视爱好者的内容聚合入口，旨在帮助用户快速发现和浏览各类热门影视作品。无论你偏好悬疑烧脑、甜宠治愈、热血动作还是纪实人文，这里都有对应的分类和推荐。很多观众搜索“人人视频官网”，核心需求是找到稳定、清晰的内容导航页面，减少在不同平台之间跳转的麻烦。</p>
+        <p>本站围绕人人视频官网的常见使用场景，提供热门推荐、最新更新、分类入口、深度解析、常见问题与观众评论等多个板块。页面内容涵盖剧集上线动态、类型标签、看点短评和更新提醒等实用信息，适合追剧党、电影爱好者、综艺观众和动漫粉丝收藏使用。如果你正在寻找一个人人视频官网首页入口，或者想了解近期有哪些值得关注的新内容，可以按照页面导航逐层浏览。</p>
+        <p>需要说明的是，本页面为内容专题与信息参考页，不提供视频存储与在线播放服务，所有内容信息以编辑整理和用户讨论为主。建议将页面加入书签，方便后续查看最新更新与相关推荐。</p>
+      </div>
+    </section>
+
+    <!-- 热门推荐 -->
+    <section class="section" id="热门推荐">
+      <div class="section-header">
+        <h2 class="section-title">热门内容推荐</h2>
+        <a href="/#最新更新" class="section-more">查看全部 →</a>
+      </div>
+      <div class="card-grid">
+        <div class="content-card">
+          <div class="card-cover">剧</div>
+          <div class="card-title">暗夜追光者 第二季</div>
+          <div class="card-tags">
+            <span class="card-tag hot">热播</span>
+            <span class="card-tag">悬疑</span>
+            <span class="card-tag">犯罪</span>
+          </div>
+          <p class="card-desc">连环案件背后隐藏着跨十年的秘密，第二季节奏更快，双线叙事让人停不下来。</p>
+          <div class="card-meta"><span>热度 9.2</span><span>更新至第8集</span></div>
+        </div>
+        <div class="content-card">
+          <div class="card-cover alt1">影</div>
+          <div class="card-title">午夜电台·未接来电</div>
+          <div class="card-tags">
+            <span class="card-tag hot">新上线</span>
+            <span class="card-tag">惊悚</span>
+            <span class="card-tag">心理</span>
+          </div>
+          <p class="card-desc">一部关于深夜电台与神秘来电的悬疑电影，氛围营造出色，结局反转值得讨论。</p>
+          <div class="card-meta"><span>评分 8.6</span><span>2026-11-05 上线</span></div>
+        </div>
+        <div class="content-card">
+          <div class="card-cover alt2">综</div>
+          <div class="card-title">周末大挑战 第五季</div>
+          <div class="card-tags">
+            <span class="card-tag">综艺</span>
+            <span class="card-tag">竞技</span>
+            <span class="card-tag hot">高讨论</span>
+          </div>
+          <p class="card-desc">全新赛制加入城市探索元素，嘉宾阵容换血后意外有化学反应，下饭首选。</p>
+          <div class="card-meta"><span>热度 8.9</span><span>每周五更新</span></div>
+        </div>
+        <div class="content-card">
+          <div class="card-cover alt3">漫</div>
+          <div class="card-title">星轨纪元</div>
+          <div class="card-tags">
+            <span class="card-tag">动漫</span>
+            <span class="card-tag">科幻</span>
+            <span class="card-tag">冒险</span>
+          </div>
+          <p class="card-desc">原创科幻动画，世界观设定扎实，机甲战斗作画流畅，被不少观众称为本季黑马。</p>
+          <div class="card-meta"><span>评分 9.0</span><span>更新至第10话</span></div>
+        </div>
+        <div class="content-card">
+          <div class="card-cover alt4">剧</div>
+          <div class="card-title">小城烟火</div>
+          <div class="card-tags">
+            <span class="card-tag">生活</span>
+            <span class="card-tag">治愈</span>
+            <span class="card-tag">家庭</span>
+          </div>
+          <p class="card-desc">慢节奏生活流剧集，讲述小城一家早餐店的日常，适合喜欢《请回答》系列的观众。</p>
+          <div class="card-meta"><span>评分 8.8</span><span>全16集已上线</span></div>
+        </div>
+        <div class="content-card">
+          <div class="card-cover alt5">影</div>
+          <div class="card-title">逆风翻盘</div>
+          <div class="card-tags">
+            <span class="card-tag">运动</span>
+            <span class="card-tag">励志</span>
+            <span class="card-tag">热血</span>
+          </div>
+          <p class="card-desc">聚焦草根篮球队的逆袭故事，比赛场面拍得很有代入感，结尾真实事件改编加分。</p>
+          <div class="card-meta"><span>评分 8.3</span><span>2026-10-28 上线</span></div>
+        </div>
+        <div class="content-card">
+          <div class="card-cover">剧</div>
+          <div class="card-title">迷雾档案</div>
+          <div class="card-tags">
+            <span class="card-tag">悬疑</span>
+            <span class="card-tag">单元剧</span>
+            <span class="card-tag hot">编辑推荐</span>
+          </div>
+          <p class="card-desc">每集一个独立悬案，主角团通过旧档案串联主线，适合碎片时间观看。</p>
+          <div class="card-meta"><span>热度 8.7</span><span>更新至第6集</span></div>
+        </div>
+        <div class="content-card">
+          <div class="card-cover alt1">综</div>
+          <div class="card-title">厨房实验室</div>
+          <div class="card-tags">
+            <span class="card-tag">美食</span>
+            <span class="card-tag">真人秀</span>
+            <span class="card-tag">轻松</span>
+          </div>
+          <p class="card-desc">厨师与科学家组队做料理实验，既有趣又能学到厨房冷知识，适合配饭观看。</p>
+          <div class="card-meta"><span>评分 8.1</span><span>每周三更新</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 最新更新 -->
+    <section class="section" id="最新更新">
+      <div class="section-header">
+        <h2 class="section-title">最新更新与热播动态</h2>
+        <span class="section-more" style="background:transparent;color:var(--text-muted);">2026-11-07 更新</span>
+      </div>
+      <div class="update-list">
+        <div class="update-item">
+          <div class="update-left">
+            <span class="update-tag">剧集</span>
+            <span class="update-name">暗夜追光者 第二季</span>
+            <span class="update-desc">第8集上线，关键证人身份曝光</span>
+          </div>
+          <span class="update-time">今日 10:00</span>
+        </div>
+        <div class="update-item">
+          <div class="update-left">
+            <span class="update-tag">电影</span>
+            <span class="update-name">午夜电台·未接来电</span>
+            <span class="update-desc">正式上线，新增导演解说版</span>
+          </div>
+          <span class="update-time">今日 09:30</span>
+        </div>
+        <div class="update-item">
+          <div class="update-left">
+            <span class="update-tag">动漫</span>
+            <span class="update-name">星轨纪元</span>
+            <span class="update-desc">第10话更新，主角团迎来首次太空战</span>
+          </div>
+          <span class="update-time">今日 08:00</span>
+        </div>
+        <div class="update-item">
+          <div class="update-left">
+            <span class="update-tag">综艺</span>
+            <span class="update-name">周末大挑战 第五季</span>
+            <span class="update-desc">第4期上线，城市追击战笑点密集</span>
+          </div>
+          <span class="update-time">昨日 20:00</span>
+        </div>
+        <div class="update-item">
+          <div class="update-left">
+            <span class="update-tag">剧集</span>
+            <span class="update-name">小城烟火</span>
+            <span class="update-desc">番外篇“早餐店的一天”上线</span>
+          </div>
+          <span class="update-time">昨日 18:00</span>
+        </div>
+        <div class="update-item">
+          <div class="update-left">
+            <span class="update-tag">电影</span>
+            <span class="update-name">逆风翻盘</span>
+            <span class="update-desc">幕后特辑上线，球员原型采访公开</span>
+          </div>
+          <span class="update-time">11-06 14:00</span>
+        </div>
+        <div class="update-item">
+          <div class="update-left">
+            <span class="update-tag">剧集</span>
+            <span class="update-name">迷雾档案</span>
+            <span class="update-desc">第6集上线，主线谜团推进</span>
+          </div>
+          <span class="update-time">11-06 10:00</span>
+        </div>
+        <div class="update-item">
+          <div class="update-left">
+            <span class="update-tag">动漫</span>
+            <span class="update-name">星轨纪元</span>
+            <span class="update-desc">官方发布第11话预告PV</span>
+          </div>
+          <span class="update-time">11-05 19:00</span>
+        </div>
+        <div class="update-item">
+          <div class="update-left">
+            <span class="update-tag">综艺</span>
+            <span class="update-name">厨房实验室</span>
+            <span class="update-desc">第7期上线，主题“发酵的秘密”</span>
+          </div>
+          <span class="update-time">11-05 12:00</span>
+        </div>
+        <div class="update-item">
+          <div class="update-left">
+            <span class="update-tag">电影</span>
+            <span class="update-name">逆风翻盘</span>
+            <span class="update-desc">上线一周，观众评分稳定在8.3</span>
+          </div>
+          <span class="update-time">11-04 16:00</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 分类入口 -->
+    <section class="section" id="分类入口">
+      <div class="section-header">
+        <h2 class="section-title">内容分类入口</h2>
+      </div>
+      <div class="category-grid">
+        <a href="/#热门推荐" class="category-item"><span class="category-icon">🎬</span>热门剧集</a>
+        <a href="/#热门推荐" class="category-item"><span class="category-icon">🍿</span>高分电影</a>
+        <a href="/#热门推荐" class="category-item"><span class="category-icon">🎤</span>热门综艺</a>
+        <a href="/#热门推荐" class="category-item"><span class="category-icon">🌸</span>人气动漫</a>
+        <a href="/#最新更新" class="category-item"><span class="category-icon">🆕</span>今日更新</a>
+        <a href="/#深度解析" class="category-item"><span class="category-icon">📝</span>编辑精选</a>
+        <a href="/#用户评论" class="category-item"><span class="category-icon">💬</span>观众热议</a>
+        <a href="/#相关资讯" class="category-item"><span class="category-icon">📰</span>影视动态</a>
+      </div>
+    </section>
+
+    <!-- 深度解析正文 -->
+    <section class="section" id="深度解析">
+      <div class="section-header">
+        <h2 class="section-title">深度解析：人人视频官网的内容生态与观看逻辑</h2>
+      </div>
+      <div class="article-body">
+        <h3>一、为什么“人人视频官网”成为高频搜索词</h3>
+        <p>在影视内容高度分散的当下，观众搜索“人人视频官网”通常带有明确的目的性：要么是想快速找到入口，要么是希望在一个页面里看到近期热门剧集、电影和综艺的聚合信息。与单一平台不同，人人视频官网的内容生态更接近一个“影视信息枢纽”——它不生产内容，但承担了发现、筛选和导流的角色。用户不需要在多个应用之间反复切换，就能了解哪些剧集正在更新、哪些电影刚刚上线、哪些综艺讨论度最高。</p>
+        <p>从搜索意图来看，搜索人人视频官网的用户大致分为三类：第一类是追剧型观众，关注剧集更新节奏和集数；第二类是发现型观众，没有明确目标，希望通过榜单和推荐找到下一部想看的作品；第三类是讨论型观众，想看看其他观众对某部作品的评价。本页面针对这三类需求，分别设置了最新更新、热门推荐和用户评论模块，尽量覆盖从“找内容”到“聊内容”的完整路径。</p>
+
+        <h3>二、内容类型与题材特点</h3>
+        <p>人人视频官网所覆盖的内容类型较为多元，从悬疑犯罪到生活治愈，从科幻动漫到竞技综艺，基本涵盖了主流影视消费场景。以近期热门内容为例，悬疑剧《暗夜追光者 第二季》主打双线叙事和反转节奏，适合喜欢烧脑推理的观众；生活剧《小城烟火》则走慢节奏路线，用日常细节打动人，适合下饭或睡前观看。电影方面，《午夜电台·未接来电》以心理惊悚为卖点，氛围营造优于视觉冲击；《逆风翻盘》则是典型的运动励志题材，比赛场面和真实事件改编是主要看点。</p>
+        <p>综艺和动漫的受众画像差异更明显。《周末大挑战 第五季》依靠赛制升级和嘉宾化学反应吸引年轻观众，适合碎片时间放松；《厨房实验室》则偏向轻知识类美食真人秀，适合家庭观众。动漫《星轨纪元》作为原创科幻作品，在设定和作画上投入较大，吸引的是核心二次元用户和科幻爱好者。这种类型分布的多样性，正是人人视频官网作为内容聚合页的价值所在——不同偏好的观众都能找到对应的入口。</p>
+
+        <h3>三、人物与角色吸引力</h3>
+        <p>影视内容的核心吸引力往往来自人物。在人人视频官网的热门推荐中，角色塑造的讨论度是衡量作品热度的重要指标。《暗夜追光者》第二季中，主角与反派的心理博弈成为观众讨论焦点，不少评论提到“反派动机比第一季更复杂”；《小城烟火》则依靠群像刻画取胜，早餐店老板、常客、邻居之间的互动构成了真实的生活质感。《星轨纪元》的角色关系图谱在观众社区中也有较高讨论度，主角团的成长线和阵营对立是追番用户最关心的部分。</p>
+        <p>对于综艺而言，“人物”更多体现为嘉宾之间的互动与化学反应。《周末大挑战》第五季更换部分嘉宾后，新组合的磨合过程本身就成了看点。观众会在评论中比较不同嘉宾的表现，这种讨论反过来又提升了节目的热度。人人视频官网在推荐卡片中保留类型标签和简短看点，正是为了帮助用户快速判断某部作品的“人物向”程度是否符合自己的偏好。</p>
+
+        <h3>四、节奏与消费体验</h3>
+        <p>不同内容的消费节奏差异很大。剧集通常需要连续追更，观众对更新频率和集数较为敏感；电影适合一次性消费，决策成本相对较低；综艺和动漫则介于两者之间，既有追更属性，也有碎片化观看的可能。人人视频官网在最新更新模块中标注了每部作品的更新状态和上线时间，目的是降低观众的“追更焦虑”——用户不需要每天手动检查，只需浏览更新列表即可掌握进度。</p>
+        <p>从页面体验来看，分类入口和标签系统是提升消费效率的关键。观众可以按类型、热度或更新时间筛选，也可以直接通过搜索框输入关键词。对于不确定看什么的用户，编辑精选和热门推荐提供了低门槛的决策参考。本页面在移动端的布局也做了适配，卡片和列表在窄屏下自动堆叠，保证可读性。</p>
+
+        <h3>五、适合人群与同类内容比较</h3>
+        <p>人人视频官网的内容覆盖面较广，适合人群包括：日常追剧的上班族、喜欢电影周末消遣的观众、二次元爱好者、综艺下饭党以及影视讨论活跃用户。如果你偏好强情节和反转，可以优先关注悬疑类剧集；如果你更看重氛围和情感，生活流作品可能更合适；如果你时间碎片化，综艺和单元剧的观看门槛更低。</p>
+        <p>与单一平台相比，人人视频官网的专题页更强调“信息聚合”而非“独家内容”。它的优势在于分类清晰、更新集中、讨论入口明显；局限在于具体播放仍需依赖对应平台。因此，本页面更适合作为选片参考和追更提醒工具，而不是替代播放平台。理解这一点，能帮助用户更高效地使用人人视频官网的相关信息。</p>
+      </div>
+    </section>
+
+    <!-- 体验指南 -->
+    <section class="section" id="体验指南">
+      <div class="section-header">
+        <h2 class="section-title">页面体验指南</h2>
+      </div>
+      <div class="intro-box">
+        <p>本页面围绕人人视频官网的常见使用场景设计，重点优化了浏览路径和阅读体验。顶部导航提供了热门推荐、最新更新、分类入口、深度解析、常见问题、用户评论和相关资讯的快速跳转，移动端会自动收起导航，减少首屏占用。搜索框支持关键词输入，方便直接定位感兴趣的内容类型。</p>
+        <p>热门推荐和最新更新模块采用卡片与列表结合的方式，信息密度适中。每张卡片包含类型标签、简短看点和更新状态，帮助用户在不点开详情的情况下完成初步筛选。分类入口使用图标加文字的形式，适合快速扫视。深度解析和体验指南部分提供编辑视角的整理，适合希望了解内容背后逻辑的读者。FAQ和评论区则补充了实用问答和观众反馈，增强页面的参考价值。</p>
+        <p>建议将页面加入书签，尤其是关注剧集更新的用户，可以定期查看最新更新列表。页面在手机、平板和桌面端均做了响应式适配，复杂装饰在窄屏下会自动简化，优先保证文字可读性。</p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="常见问题">
+      <div class="section-header">
+        <h2 class="section-title">常见问题</h2>
+      </div>
+      <div class="faq-grid">
+        <div class="faq-card">
+          <div class="faq-q"><span>Q</span>人人视频官网这个页面主要提供什么？</div>
+          <div class="faq-a">本页面是影视内容聚合专题页，提供热门剧集、电影、综艺、动漫的推荐、更新动态、分类入口和观众评论等信息，帮助用户快速发现和筛选感兴趣的内容。页面不提供视频存储与在线播放服务，具体观看需前往对应平台。</div>
+        </div>
+        <div class="faq-card">
+          <div class="faq-q"><span>Q</span>如何快速找到最近更新的剧集？</div>
+          <div class="faq-a">可以点击导航中的“最新更新”或直接浏览页面中的最新更新列表。列表按时间排序，标注了内容名称、更新集数和上线时间，方便追剧用户快速掌握进度。建议收藏页面，定期查看。</div>
+        </div>
+        <div class="faq-card">
+          <div class="faq-q"><span>Q</span>热门推荐里的作品适合什么人群？</div>
+          <div class="faq-a">热门推荐覆盖悬疑、生活、运动、科幻、综艺、美食等类型。悬疑剧适合喜欢烧脑反转的观众，生活剧适合偏好治愈慢节奏的用户，运动电影适合热血励志爱好者，动漫和综艺则更适合碎片时间观看。每张卡片都标注了类型标签，可据此判断是否符合个人口味。</div>
+        </div>
+        <div class="faq-card">
+          <div class="faq-q"><span>Q</span>页面上的评分和热度是真实的吗？</div>
+          <div class="faq-a">页面中的评分、热度和更新时间均为编辑整理的模拟参考信息，用于展示内容推荐逻辑，不代表官方实时数据。实际数据请以各内容平台发布为准。建议将本页面作为选片参考，而非权威评分来源。</div>
+        </div>
+        <div class="faq-card">
+          <div class="faq-q"><span>Q</span>如何通过分类入口找到特定类型的内容？</div>
+          <div class="faq-a">页面中部设有分类入口，包含热门剧集、高分电影、热门综艺、人气动漫等。点击对应入口可跳转到相关推荐区域。深度解析模块也按类型做了内容梳理，适合希望系统了解某一类型特点的读者。</div>
+        </div>
+        <div class="faq-card">
+          <div class="faq-q"><span>Q</span>为什么有些热门内容没有在页面上出现？</div>
+          <div class="faq-a">本页面的推荐内容基于编辑筛选和近期讨论热度整理，并非全量收录。影视内容更新频繁，部分作品可能未及时覆盖。建议结合搜索框和分类入口查找，或关注相关资讯模块了解最新动态。</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 用户评论 -->
+    <section class="section" id="用户评论">
+      <div class="section-header">
+        <h2 class="section-title">观众评论</h2>
+        <span class="section-more" style="background:transparent;color:var(--text-muted);">近30天讨论</span>
+      </div>
+      <div class="comment-grid">
+        <div class="comment-card">
+          <div class="comment-user">
+            <div class="comment-avatar">追</div>
+            <div><div class="comment-name">追剧小能手</div><div class="comment-date">2026-11-06</div></div>
+          </div>
+          <p class="comment-text">暗夜追光者第二季真的比第一季还上头，第8集那个反转我直接倒回去看了两遍。希望结局别烂尾。</p>
+        </div>
+        <div class="comment-card">
+          <div class="comment-user">
+            <div class="comment-avatar">电</div>
+            <div><div class="comment-name">电影放映员</div><div class="comment-date">2026-11-05</div></div>
+          </div>
+          <p class="comment-text">午夜电台那部氛围不错，但中间有点拖，压缩到90分钟会更好。结局加分，总体值得一看。</p>
+        </div>
+        <div class="comment-card">
+          <div class="comment-user">
+            <div class="comment-avatar">星</div>
+            <div><div class="comment-name">星轨观测站</div><div class="comment-date">2026-11-05</div></div>
+          </div>
+          <p class="comment-text">星轨纪元的机甲作画太顶了，第10话太空战经费在燃烧。就是文戏稍微有点慢，希望后面节奏拉起来。</p>
+        </div>
+        <div class="comment-card">
+          <div class="comment-user">
+            <div class="comment-avatar">下</div>
+            <div><div class="comment-name">下饭综艺党</div><div class="comment-date">2026-11-04</div></div>
+          </div>
+          <p class="comment-text">周末大挑战新一季嘉宾换血之后意外好看，城市追击那期笑到喷饭。就是广告植入有点多。</p>
+        </div>
+        <div class="comment-card">
+          <div class="comment-user">
+            <div class="comment-avatar">小</div>
+            <div><div class="comment-name">小城故事多</div><div class="comment-date">2026-11-04</div></div>
+          </div>
+          <p class="comment-text">小城烟火太治愈了，每集看完都想回家吃早饭。番外篇也很用心，希望有第二季。</p>
+        </div>
+        <div class="comment-card">
+          <div class="comment-user">
+            <div class="comment-avatar">逆</div>
+            <div><div class="comment-name">逆风球迷</div><div class="comment-date">2026-11-03</div></div>
+          </div>
+          <p class="comment-text">逆风翻盘的比赛镜头拍得很真实，不像有些运动片全靠剪辑糊弄。结尾原型采访看哭了。</p>
+        </div>
+        <div class="comment-card">
+          <div class="comment-user">
+            <div class="comment-avatar">迷</div>
+            <div><div class="comment-name">迷雾追踪者</div><div class="comment-date">2026-11-02</div></div>
+          </div>
+          <p class="comment-text">迷雾档案单元剧形式挺好的，适合通勤看。就是主线推进有点慢，希望后面几集能收回来。</p>
+        </div>
+        <div class="comment-card">
+          <div class="comment-user">
+            <div class="comment-avatar">厨</div>
+            <div><div class="comment-name">厨房实验员</div><div class="comment-date">2026-11-01</div></div>
+          </div>
+          <p class="comment-text">厨房实验室每期都能学到奇怪的知识，发酵那期我直接下单了泡菜坛子。轻松有趣，推荐。</p>
+        </div>
+        <div class="comment-card">
+          <div class="comment-user">
+            <div class="comment-avatar">路</div>
+            <div><div class="comment-name">路过看看</div><div class="comment-date">2026-10-31</div></div>
+          </div>
+          <p class="comment-text">这个页面整理得挺清楚的，找剧方便。不过希望能多加点老片推荐，新剧有时候看不过来。</p>
+        </div>
+        <div class="comment-card">
+          <div class="comment-user">
+            <div class="comment-avatar">深</div>
+            <div><div class="comment-name">深度潜水员</div><div class="comment-date">2026-10-30</div></div>
+          </div>
+          <p class="comment-text">暗夜追光者第二季反派演得真好，那种压迫感隔着屏幕都能感觉到。希望别被写死得太随便。</p>
+        </div>
+        <div class="comment-card">
+          <div class="comment-user">
+            <div class="comment-avatar">动</div>
+            <div><div class="comment-name">动漫杂食党</div><div class="comment-date">2026-10-29</div></div>
+          </div>
+          <p class="comment-text">星轨纪元的设定集什么时候出？角色关系图谱看得我有点乱，想收一本设定集慢慢研究。</p>
+        </div>
+        <div class="comment-card">
+          <div class="comment-user">
+            <div class="comment-avatar">周</div>
+            <div><div class="comment-name">周末不加班</div><div class="comment-date">2026-10-28</div></div>
+          </div>
+          <p class="comment-text">人人视频官网这个说法我一直以为是某个平台，原来是个专题页。不过内容整理得还行，先收藏了。</p>
+        </div>
+        <div class="comment-card">
+          <div class="comment-user">
+            <div class="comment-avatar">观</div>
+            <div><div class="comment-name">观剧笔记</div><div class="comment-date">2026-10-27</div></div>
+          </div>
+          <p class="comment-text">建议加一个“看过”标记功能，不然每次都要自己记看到第几集。页面整体不错，更新挺及时的。</p>
+        </div>
+        <div class="comment-card">
+          <div class="comment-user">
+            <div class="comment-avatar">半</div>
+            <div><div class="comment-name">半糖去冰</div><div class="comment-date">2026-10-26</div></div>
+          </div>
+          <p class="comment-text">小城烟火和厨房实验室是我的下饭双宝。一个看人情，一个看美食，完美。</p>
+        </div>
+        <div class="comment-card">
+          <div class="comment-user">
+            <div class="comment-avatar">冷</div>
+            <div><div class="comment-name">冷面笑匠</div><div class="comment-date">2026-10-25</div></div>
+          </div>
+          <p class="comment-text">午夜电台的结局我猜到了，但过程还是看得紧张。整体7.5分吧，氛围加分，剧本再打磨一下会更好。</p>
+        </div>
+        <div class="comment-card">
+          <div class="comment-user">
+            <div class="comment-avatar">新</div>
+            <div><div class="comment-name">新手上路</div><div class="comment-date">2026-10-24</div></div>
+          </div>
+          <p class="comment-text">刚关注这个页面，分类挺全的，就是希望热门推荐能多换换，不要总是那几部。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 相关资讯 -->
+    <section class="section" id="相关资讯">
+      <div class="section-header">
+        <h2 class="section-title">相关资讯</h2>
+      </div>
+      <div class="news-grid">
+        <div class="news-card">
+          <div class="news-date">2026-11-07</div>
+          <div class="news-title">暗夜追光者第二季进入后半程，关键证人线引发讨论</div>
+          <p class="news-summary">第8集上线后，观众对“证人是否可信”展开热议。编剧在采访中表示，后续两集将回收部分伏笔，人物关系会有较大调整。</p>
+        </div>
+        <div class="news-card">
+          <div class="news-date">2026-11-06</div>
+          <div class="news-title">午夜电台·未接来电上线导演解说版，补充结局细节</div>
+          <p class="news-summary">导演解说版增加了约12分钟内容，主要补充电台主持人的背景故事和结局的另一种解读，适合二刷观众。</p>
+        </div>
+        <div class="news-card">
+          <div class="news-date">2026-11-05</div>
+          <div class="news-title">星轨纪元第10话太空战获好评，官方发布制作特辑</div>
+          <p class="news-summary">本话机甲战斗作画在社交平台引发讨论，制作组发布分镜与3D layout对比特辑，展示动画制作流程。</p>
+        </div>
+        <div class="news-card">
+          <div class="news-date">2026-11-04</div>
+          <div class="news-title">周末大挑战第五季赛制升级，城市追击战成话题焦点</div>
+          <p class="news-summary">新一季加入城市探索元素后，节目节奏明显加快。第4期追击战片段在短视频平台获得较高播放量。</p>
+        </div>
+        <div class="news-card">
+          <div class="news-date">2026-11-03</div>
+          <div class="news-title">小城烟火番外篇上线，导演透露第二季正在筹备中</div>
+          <p class="news-summary">番外篇以早餐店一天为切口，补充了正片中未展开的邻里关系。导演在采访中确认第二季剧本已进入开发阶段。</p>
+        </div>
+        <div class="news-card">
+          <div class="news-date">2026-11-01</div>
+          <div class="news-title">逆风翻盘上线一周，真实事件原型采访公开</div>
+          <p class="news-summary">影片结尾原型球队的采访片段在观众中反响强烈。片方表示将推出公益放映专场，具体信息待公布。</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          <div class="footer-brand">人人视频官网 · 内容专题页</div>
+          <p class="footer-desc">本页面为影视内容信息聚合与推荐参考，不提供视频存储及在线播放服务。页面内容由编辑整理，评分、热度等数据为模拟参考，具体以各内容平台发布为准。</p>
+        </div>
+        <div class="footer-col">
+          <h4>快速导航</h4>
+          <a href="/#热门推荐">热门推荐</a>
+          <a href="/#最新更新">最新更新</a>
+          <a href="/#分类入口">分类入口</a>
+          <a href="/#深度解析">深度解析</a>
+        </div>
+        <div class="footer-col">
+          <h4>内容分类</h4>
+          <a href="/#热门推荐">热门剧集</a>
+          <a href="/#热门推荐">高分电影</a>
+          <a href="/#热门推荐">热门综艺</a>
+          <a href="/#热门推荐">人气动漫</a>
+        </div>
+        <div class="footer-col">
+          <h4>交流与反馈</h4>
+          <a href="/#用户评论">观众评论</a>
+          <a href="/#常见问题">常见问题</a>
+          <a href="/#相关资讯">相关资讯</a>
+          <a href="/#体验指南">体验指南</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 人人视频官网内容专题页 · 信息参考用途</span>
+        <span>友情链接：影视观察 · 剧集指南 · 动漫周刊 · 综艺速递</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+              </html>
