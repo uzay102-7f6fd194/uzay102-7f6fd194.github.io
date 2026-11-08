@@ -1,0 +1,672 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>漫蛙漫画-在线漫画阅读推荐_漫蛙漫画热门作品与更新指南</title>
+<meta name="description" content="漫蛙漫画专题页提供热门漫画推荐、最新更新动态、分类筛选与深度解析。想找漫蛙漫画热门作品、追更新作或了解阅读顺序，这里整理了榜单、FAQ和真实读者评论，方便收藏与浏览。">
+<meta name="keywords" content="漫蛙漫画,漫蛙漫画在线,漫蛙漫画推荐,漫蛙漫画更新,漫画阅读">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2318243d'/%3E%3Cpath d='M14 46V20h10l5 9 5-9h10v26H34V32l-5 9-5-9v14H14z' fill='%23f7c948'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#f6f8fc;
+  --bg-deep:#edf1f8;
+  --surface:#ffffff;
+  --surface-soft:#f0f4fb;
+  --ink:#19233c;
+  --ink-soft:#4a5570;
+  --muted:#7c88a3;
+  --line:#dde4f0;
+  --brand:#1e3a6e;
+  --brand-bright:#2a5caa;
+  --accent:#f0b429;
+  --accent-soft:#fdf3d8;
+  --cyan:#1f8a9c;
+  --green:#2f8f6b;
+  --radius-xl:26px;
+  --radius-lg:18px;
+  --radius-md:12px;
+  --shadow-sm:0 2px 10px rgba(24, 37, 63, 0.05);
+  --shadow-md:0 12px 30px rgba(24, 37, 63, 0.08);
+  --shadow-lg:0 22px 50px rgba(24, 37, 63, 0.12);
+  --maxw:1200px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:"PingFang SC","Microsoft YaHei","Noto Sans SC",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.75;
+  font-size:16px;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none;}
+img{max-width:100%;display:block;}
+ul{list-style:none;}
+button,input{font:inherit;}
+.container{max-width:var(--maxw);margin:0 auto;padding:0 20px;}
+.section{padding:52px 0;}
+.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;margin-bottom:28px;flex-wrap:wrap;}
+.section-head h2{font-size:clamp(22px,3.2vw,28px);letter-spacing:-0.02em;color:var(--ink);position:relative;padding-left:16px;line-height:1.3;}
+.section-head h2::before{content:"";position:absolute;left:0;top:6px;bottom:6px;width:5px;border-radius:5px;background:linear-gradient(180deg,var(--accent),var(--cyan));}
+.section-head p{color:var(--muted);font-size:14px;max-width:520px;}
+.tag{display:inline-flex;align-items:center;gap:4px;padding:3px 10px;border-radius:40px;font-size:12px;font-weight:600;background:var(--surface-soft);color:var(--ink-soft);white-space:nowrap;}
+.tag.hot{background:#fff1d6;color:#9a6b00;}
+.tag.new{background:#e3f6ef;color:#127a5a;}
+.tag.rec{background:#e7eefb;color:#234a8c;}
+.card-hover{transition:transform .25s ease, box-shadow .25s ease;will-change:transform;}
+.card-hover:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);}
+
+/* ===== 顶部导航 ===== */
+.topbar{position:sticky;top:0;z-index:50;background:rgba(246,248,252,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);}
+.topbar-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;height:66px;}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:19px;letter-spacing:-0.03em;color:var(--brand);}
+.logo-mark{width:36px;height:36px;border-radius:11px;background:linear-gradient(135deg,#1e3a6e,#2a5caa);display:grid;place-items:center;color:#f7c948;font-size:17px;font-weight:900;box-shadow:0 6px 14px rgba(30,58,110,.22);}
+.nav-links{display:flex;align-items:center;gap:6px;flex-wrap:wrap;}
+.nav-links a{padding:8px 12px;border-radius:10px;font-size:14px;color:var(--ink-soft);transition:.2s;}
+.nav-links a:hover{background:#e9eef9;color:var(--brand);}
+.nav-cta{display:flex;align-items:center;gap:10px;}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;padding:9px 20px;border-radius:40px;font-size:14px;font-weight:700;border:1px solid transparent;cursor:pointer;transition:.22s;white-space:nowrap;}
+.btn-primary{background:var(--brand);color:#fff;box-shadow:0 8px 18px rgba(30,58,110,.2);}
+.btn-primary:hover{background:#162e58;transform:translateY(-1px);}
+.btn-ghost{background:var(--surface);color:var(--brand);border-color:var(--line);}
+.btn-ghost:hover{border-color:#c2d0e8;background:#f9fbff;}
+.menu-toggle{display:none;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:8px 12px;font-size:14px;}
+
+/* ===== Banner ===== */
+.hero{padding:48px 0 38px;background:radial-gradient(ellipse at 16% 0%,#e7edfb 0%,transparent 58%),radial-gradient(ellipse at 90% 20%,#fef4dd 0%,transparent 42%),var(--bg);}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:36px;align-items:center;}
+.hero-kicker{display:inline-flex;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--line);border-radius:40px;padding:5px 14px;font-size:13px;color:var(--brand-bright);font-weight:600;box-shadow:var(--shadow-sm);margin-bottom:16px;}
+.hero h1{font-size:clamp(30px,4.6vw,44px);line-height:1.18;letter-spacing:-0.04em;color:var(--ink);margin-bottom:16px;font-weight:900;}
+.hero h1 em{font-style:normal;color:var(--brand-bright);background:linear-gradient(180deg,transparent 64%,#fdeeb8 64%);padding:0 4px;}
+.hero-desc{font-size:16px;color:var(--ink-soft);max-width:600px;margin-bottom:24px;}
+.hero-search{display:flex;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:60px;padding:6px;box-shadow:var(--shadow-md);max-width:540px;margin-bottom:22px;}
+.hero-search input{flex:1;border:0;outline:0;background:transparent;padding:11px 18px;font-size:15px;color:var(--ink);}
+.hero-search input::placeholder{color:#9aa5bb;}
+.hero-search .btn{border-radius:40px;padding:10px 26px;}
+.hero-actions{display:flex;flex-wrap:wrap;gap:10px;}
+.hero-actions .tag{background:var(--surface);border:1px solid var(--line);color:var(--ink-soft);font-weight:500;padding:7px 14px;border-radius:40px;}
+.hero-actions .tag:hover{border-color:#c3d2ec;color:var(--brand);background:#f9fbff;}
+.hero-panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-xl);padding:26px;box-shadow:var(--shadow-lg);}
+.hero-panel h3{font-size:17px;margin-bottom:6px;display:flex;align-items:center;gap:8px;}
+.hero-panel h3 span{font-size:12px;background:var(--accent-soft);color:#8a6100;padding:2px 10px;border-radius:30px;font-weight:600;}
+.hero-panel .mini-list{margin-top:16px;display:grid;gap:12px;}
+.mini-item{display:flex;align-items:flex-start;gap:12px;padding:10px 0;border-bottom:1px dashed var(--line);}
+.mini-item:last-child{border-bottom:0;padding-bottom:0;}
+.mini-cover{width:46px;height:58px;border-radius:8px;background:linear-gradient(135deg,#dbe6fa,#b7cdf5);flex-shrink:0;display:grid;place-items:center;font-size:11px;font-weight:700;color:#36598f;text-align:center;line-height:1.2;padding:4px;}
+.mini-item strong{font-size:14px;display:block;color:var(--ink);margin-bottom:2px;}
+.mini-item small{font-size:12px;color:var(--muted);}
+
+/* ===== 分类快捷入口 ===== */
+.cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+.cat-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-lg);padding:18px 16px;display:flex;align-items:center;gap:12px;box-shadow:var(--shadow-sm);transition:.22s;}
+.cat-card:hover{border-color:#c3d2ec;transform:translateY(-3px);box-shadow:var(--shadow-md);}
+.cat-icon{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;font-size:18px;background:#eef4ff;color:var(--brand);flex-shrink:0;}
+.cat-card:nth-child(2n) .cat-icon{background:#fff4dd;color:#a06d00;}
+.cat-card:nth-child(3n) .cat-icon{background:#e6f7f0;color:#18835f;}
+.cat-card:nth-child(4n) .cat-icon{background:#f0e9fd;color:#5b3fa3;}
+.cat-card strong{font-size:15px;display:block;margin-bottom:2px;}
+.cat-card small{font-size:12px;color:var(--muted);}
+
+/* ===== 推荐卡片 ===== */
+.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+.rec-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-lg);overflow:hidden;display:flex;flex-direction:column;box-shadow:var(--shadow-sm);}
+.rec-cover{height:160px;background:linear-gradient(135deg,#dbe6fa,#a9c3ea);display:flex;align-items:flex-end;justify-content:flex-start;padding:14px;position:relative;}
+.rec-cover::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(13,27,52,.36));}
+.rec-cover span{position:relative;z-index:1;color:#fff;font-weight:700;font-size:13px;background:rgba(16,31,58,.6);backdrop-filter:blur(4px);padding:4px 12px;border-radius:30px;}
+.rec-body{padding:16px 16px 18px;display:flex;flex-direction:column;flex:1;}
+.rec-body h3{font-size:16px;margin-bottom:6px;line-height:1.4;letter-spacing:-0.01em;}
+.rec-body .tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px;}
+.rec-body p{font-size:13px;color:var(--ink-soft);flex:1;margin-bottom:12px;}
+.rec-meta{display:flex;align-items:center;justify-content:space-between;font-size:12px;color:var(--muted);border-top:1px solid var(--line);padding-top:10px;}
+.rec-meta strong{color:var(--brand);font-size:13px;}
+
+/* ===== 更新列表 ===== */
+.update-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px 24px;}
+.update-item{display:flex;align-items:flex-start;gap:12px;padding:14px 0;border-bottom:1px dashed var(--line);}
+.update-num{width:30px;height:30px;border-radius:9px;background:#eef4ff;color:var(--brand);font-size:13px;font-weight:800;display:grid;place-items:center;flex-shrink:0;}
+.update-item strong{font-size:15px;display:block;margin-bottom:2px;}
+.update-item small{font-size:12px;color:var(--muted);display:block;line-height:1.5;}
+.update-time{font-size:12px;color:var(--cyan);white-space:nowrap;margin-left:auto;padding-left:8px;}
+
+/* ===== 深度解析 ===== */
+.article-shell{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-xl);padding:clamp(24px,4vw,44px);box-shadow:var(--shadow-sm);}
+.article-shell h2{font-size:clamp(22px,3vw,28px);margin-bottom:18px;letter-spacing:-0.02em;}
+.article-shell h3{font-size:18px;margin:26px 0 10px;color:var(--brand);}
+.article-shell p{font-size:15.5px;color:var(--ink-soft);margin-bottom:14px;}
+.article-shell blockquote{border-left:4px solid var(--accent);background:var(--accent-soft);padding:14px 20px;border-radius:0 10px 10px 0;margin:18px 0;font-size:14.5px;color:#6b5200;}
+.article-shell ul{margin:10px 0 18px 0;padding-left:20px;list-style:disc;color:var(--ink-soft);font-size:15px;}
+.article-shell li{margin-bottom:8px;}
+
+/* ===== 数据看板 / 体验 ===== */
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+.metric{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-lg);padding:22px 18px;text-align:center;box-shadow:var(--shadow-sm);}
+.metric strong{font-size:28px;display:block;color:var(--brand);letter-spacing:-0.03em;line-height:1.2;}
+.metric span{font-size:13px;color:var(--muted);}
+
+/* ===== FAQ ===== */
+.faq-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;}
+.faq-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-lg);padding:20px;box-shadow:var(--shadow-sm);}
+.faq-card h3{font-size:15.5px;margin-bottom:8px;color:var(--ink);display:flex;gap:8px;align-items:flex-start;}
+.faq-card h3::before{content:"Q";font-size:12px;background:var(--brand);color:#fff;width:22px;height:22px;border-radius:7px;display:grid;place-items:center;flex-shrink:0;margin-top:2px;}
+.faq-card p{font-size:14px;color:var(--ink-soft);padding-left:30px;}
+
+/* ===== 用户评论 ===== */
+.comment-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;}
+.comment-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-lg);padding:18px;box-shadow:var(--shadow-sm);}
+.comment-head{display:flex;align-items:center;gap:10px;margin-bottom:10px;}
+.avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#dbe6fa,#b5cbf2);display:grid;place-items:center;font-size:13px;font-weight:800;color:#36598f;flex-shrink:0;}
+.comment-head strong{font-size:14px;}
+.comment-head small{font-size:12px;color:var(--muted);margin-left:auto;}
+.comment-card p{font-size:14px;color:var(--ink-soft);}
+
+/* ===== 资讯 ===== */
+.news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+.news-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-lg);padding:20px;box-shadow:var(--shadow-sm);}
+.news-card time{font-size:12px;color:var(--cyan);font-weight:600;display:block;margin-bottom:8px;}
+.news-card h3{font-size:16px;margin-bottom:8px;line-height:1.4;}
+.news-card p{font-size:13px;color:var(--ink-soft);}
+
+/* ===== 订阅 ===== */
+.subscribe-band{background:linear-gradient(135deg,#1e3a6e,#2a5caa);border-radius:var(--radius-xl);padding:clamp(28px,4vw,48px);color:#fff;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;box-shadow:var(--shadow-lg);}
+.subscribe-band h2{font-size:clamp(20px,2.8vw,28px);letter-spacing:-0.02em;margin-bottom:6px;}
+.subscribe-band p{font-size:14px;opacity:.82;max-width:480px;}
+.subscribe-form{display:flex;background:#fff;border-radius:50px;padding:5px;gap:4px;min-width:280px;}
+.subscribe-form input{flex:1;border:0;outline:0;padding:10px 16px;border-radius:40px;font-size:14px;}
+.subscribe-form .btn{background:var(--accent);color:#3d2c00;border-radius:40px;padding:10px 22px;font-weight:800;}
+.subscribe-form .btn:hover{background:#e6a91f;}
+
+/* ===== 页脚 ===== */
+.footer{background:#111d33;color:#aeb9cf;padding:52px 0 28px;margin-top:20px;}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:32px;margin-bottom:36px;}
+.footer h4{color:#fff;font-size:15px;margin-bottom:14px;letter-spacing:.02em;}
+.footer p{font-size:13px;line-height:1.8;color:#8d99b1;}
+.footer ul{display:grid;gap:8px;}
+.footer ul a{font-size:13px;color:#8d99b1;transition:.2s;}
+.footer ul a:hover{color:#fff;}
+.footer-bottom{border-top:1px solid #26344e;padding-top:20px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:12px;color:#73809a;}
+
+/* ===== 响应式 ===== */
+@media (max-width:960px){
+  .hero-grid{grid-template-columns:1fr;}
+  .card-grid{grid-template-columns:repeat(2,1fr);}
+  .cat-grid{grid-template-columns:repeat(2,1fr);}
+  .metrics{grid-template-columns:repeat(2,1fr);}
+  .news-grid{grid-template-columns:repeat(2,1fr);}
+  .footer-grid{grid-template-columns:1fr 1fr;}
+  .nav-links{display:none;}
+  .menu-toggle{display:inline-flex;}
+}
+@media (max-width:640px){
+  .section{padding:36px 0;}
+  .topbar-inner{height:60px;}
+  .hero{padding:32px 0 28px;}
+  .hero-search{flex-wrap:wrap;border-radius:18px;padding:10px;}
+  .hero-search input{width:100%;}
+  .hero-search .btn{width:100%;border-radius:12px;}
+  .card-grid,.cat-grid,.metrics,.news-grid,.comment-grid,.faq-grid,.update-list{grid-template-columns:1fr;}
+  .footer-grid{grid-template-columns:1fr;}
+  .subscribe-form{flex-wrap:wrap;border-radius:18px;}
+  .subscribe-form input{width:100%;}
+  .subscribe-form .btn{width:100%;border-radius:12px;}
+  .rec-cover{height:140px;}
+  .article-shell{padding:22px 18px;}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- ================= 顶部导航 ================= -->
+<header class="topbar">
+  <div class="container topbar-inner">
+    <a href="/#top" class="logo" aria-label="漫蛙漫画首页">
+      <span class="logo-mark">蛙</span>
+      <span>漫蛙漫画</span>
+    </a>
+    <nav class="nav-links" aria-label="主导航">
+      <a href="/#hot">热门推荐</a>
+      <a href="/#update">最新更新</a>
+      <a href="/#category">分类索引</a>
+      <a href="/#deep">深度解析</a>
+      <a href="/#guide">阅读指南</a>
+      <a href="/#faq">常见问题</a>
+      <a href="/#review">读者评论</a>
+      <a href="/#news">漫画资讯</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="/#subscribe" class="btn btn-primary">收藏专题</a>
+      <button class="menu-toggle" type="button" aria-label="菜单">菜单</button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ================= 首屏 Banner ================= -->
+<section class="hero" id="hero" aria-labelledby="heroTitle">
+  <div class="container hero-grid">
+    <div>
+      <span class="hero-kicker">📚 漫画阅读 · 追更专题</span>
+      <h1 id="heroTitle">漫蛙漫画：<em>热门漫画推荐</em>与更新追踪站</h1>
+      <p class="hero-desc">
+        漫蛙漫画专题页围绕“找漫画、看推荐、追更新”整理内容。这里汇集热门作品榜单、分类入口、更新动态与深度解析，方便你快速判断哪些作品值得追、新章节什么时候上线，也能在同类推荐里继续扩展阅读路径。
+      </p>
+      <form class="hero-search" role="search" onsubmit="return false;">
+        <input type="search" placeholder="搜索漫蛙漫画作品、作者或标签，例如：热血、悬疑、恋爱" aria-label="搜索漫画">
+        <button class="btn btn-primary" type="submit">搜索</button>
+      </form>
+      <div class="hero-actions" aria-label="热门标签">
+        <a class="tag" href="/#hot">热血冒险</a>
+        <a class="tag" href="/#hot">悬疑推理</a>
+        <a class="tag" href="/#hot">恋爱日常</a>
+        <a class="tag" href="/#update">新作上线</a>
+        <a class="tag" href="/#category">奇幻世界</a>
+        <a class="tag" href="/#category">校园治愈</a>
+        <a class="tag" href="/#deep">编辑力荐</a>
+        <a class="tag" href="/#news">更新日历</a>
+      </div>
+    </div>
+    <aside class="hero-panel" aria-label="本周编辑速览">
+      <h3>本周编辑速览 <span>11.07</span></h3>
+      <p style="font-size:13px;color:var(--muted);margin-bottom:4px;">漫蛙漫画近期讨论度较高的作品与更新动态</p>
+      <div class="mini-list">
+        <div class="mini-item">
+          <div class="mini-cover">深海<br>回声</div>
+          <div><strong>《深海回声》第2季更新</strong><small>悬疑 / 心理 / 更新至第14话</small></div>
+        </div>
+        <div class="mini-item">
+          <div class="mini-cover">剑与<br>晨星</div>
+          <div><strong>《剑与晨星》新章上线</strong><small>热血 / 冒险 / 本周推荐</small></div>
+        </div>
+        <div class="mini-item">
+          <div class="mini-cover">夏日<br>便利店</div>
+          <div><strong>《夏日便利店》番外篇</strong><small>日常 / 治愈 / 人气连载</small></div>
+        </div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- ================= 分类快捷入口 ================= -->
+<section class="section" id="category" aria-labelledby="catTitle">
+  <div class="container">
+    <div class="section-head">
+      <h2 id="catTitle">漫蛙漫画分类入口</h2>
+      <p>按题材和阅读偏好快速筛选，减少翻找时间</p>
+    </div>
+    <div class="cat-grid">
+      <a class="cat-card card-hover" href="/#hot"><span class="cat-icon">🔥</span><span><strong>热血冒险</strong><small>战斗 / 成长 / 伙伴</small></span></a>
+      <a class="cat-card card-hover" href="/#hot"><span class="cat-icon">🧩</span><span><strong>悬疑推理</strong><small>谜案 / 反转 / 心理</small></span></a>
+      <a class="cat-card card-hover" href="/#hot"><span class="cat-icon">💖</span><span><strong>恋爱日常</strong><small>甜向 / 校园 / 治愈</small></span></a>
+      <a class="cat-card card-hover" href="/#category"><span class="cat-icon">🗺️</span><span><strong>奇幻世界</strong><small>异世界 / 魔法 / 设定</small></span></a>
+      <a class="cat-card card-hover" href="/#category"><span class="cat-icon">🏫</span><span><strong>校园生活</strong><small>青春 / 社团 / 成长</small></span></a>
+      <a class="cat-card card-hover" href="/#update"><span class="cat-icon">⚡</span><span><strong>新作速递</strong><small>近期上线 / 编辑关注</small></span></a>
+      <a class="cat-card card-hover" href="/#guide"><span class="cat-icon">🕹️</span><span><strong>游戏改篇</strong><small>世界观 / 角色 / 战斗</small></span></a>
+      <a class="cat-card card-hover" href="/#deep"><span class="cat-icon">📖</span><span><strong>深度解析</strong><small>剧情 / 人物 / 画风</small></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 热门推荐 ================= -->
+<section class="section" id="hot" aria-labelledby="hotTitle" style="background:var(--bg-deep);">
+  <div class="container">
+    <div class="section-head">
+      <h2 id="hotTitle">漫蛙漫画热门推荐</h2>
+      <p>结合更新频率、读者讨论度和类型完成度整理的推荐卡片</p>
+    </div>
+    <div class="card-grid">
+
+      <article class="rec-card card-hover">
+        <div class="rec-cover" style="background:linear-gradient(135deg,#2b4d7c,#6f95cb);"><span>悬疑 · 更新至14话</span></div>
+        <div class="rec-body">
+          <h3>深海回声</h3>
+          <div class="tags"><span class="tag hot">热门</span><span class="tag">心理悬疑</span><span class="tag">都市异闻</span></div>
+          <p>一座海边小城的旧案与失踪事件重叠，主角在梦境和现实之间反复验证线索。氛围感强，适合喜欢慢热推理的读者。</p>
+          <div class="rec-meta"><span>更新：第14话</span><strong>热度 9.6</strong></div>
+        </div>
+      </article>
+
+      <article class="rec-card card-hover">
+        <div class="rec-cover" style="background:linear-gradient(135deg,#8b5e34,#d9a45b);"><span>热血 · 新章上线</span></div>
+        <div class="rec-body">
+          <h3>剑与晨星</h3>
+          <div class="tags"><span class="tag new">新章</span><span class="tag">热血冒险</span><span class="tag">成长线</span></div>
+          <p>少年剑士在边境城镇集结伙伴，一路挑战旧秩序。战斗分镜节奏明快，人物关系推进自然，适合追更型读者。</p>
+          <div class="rec-meta"><span>更新：第31话</span><strong>热度 9.4</strong></div>
+        </div>
+      </article>
+
+      <article class="rec-card card-hover">
+        <div class="rec-cover" style="background:linear-gradient(135deg,#3d6b5c,#85b8a3);"><span>治愈 · 番外更新</span></div>
+        <div class="rec-body">
+          <h3>夏日便利店</h3>
+          <div class="tags"><span class="tag rec">编辑推荐</span><span class="tag">日常治愈</span><span class="tag">群像</span></div>
+          <p>以深夜便利店为舞台，每一话围绕一位客人展开小故事。节奏舒缓，适合作为睡前阅读或通勤间隙的轻松选择。</p>
+          <div class="rec-meta"><span>更新：番外2</span><strong>热度 9.1</strong></div>
+        </div>
+      </article>
+
+      <article class="rec-card card-hover">
+        <div class="rec-cover" style="background:linear-gradient(135deg,#5b3f7d,#a583c9);"><span>奇幻 · 连载中</span></div>
+        <div class="rec-body">
+          <h3>雾之国魔法使</h3>
+          <div class="tags"><span class="tag">异世界</span><span class="tag">魔法体系</span><span class="tag hot">高热</span></div>
+          <p>魔法使在雾灾之后寻找失落的古代术式，世界观设定细致，战斗与解谜交织，适合喜欢设定考据的读者。</p>
+          <div class="rec-meta"><span>更新：第22话</span><strong>热度 9.3</strong></div>
+        </div>
+      </article>
+
+      <article class="rec-card card-hover">
+        <div class="rec-cover" style="background:linear-gradient(135deg,#9c4b54,#e08f8f);"><span>恋爱 · 人气连载</span></div>
+        <div class="rec-body">
+          <h3>放学后的第三排</h3>
+          <div class="tags"><span class="tag">校园恋爱</span><span class="tag">青春</span><span class="tag rec">口碑好</span></div>
+          <p>同班同学因值日安排逐渐熟悉，误会与和解都写得克制自然。人物情绪细腻，适合偏好日常感情线的读者。</p>
+          <div class="rec-meta"><span>更新：第18话</span><strong>热度 9.0</strong></div>
+        </div>
+      </article>
+
+      <article class="rec-card card-hover">
+        <div class="rec-cover" style="background:linear-gradient(135deg,#2e5f72,#6fb3c4);"><span>科幻 · 新作上架</span></div>
+        <div class="rec-body">
+          <h3>零号观测站</h3>
+          <div class="tags"><span class="tag new">新作</span><span class="tag">科幻悬疑</span><span class="tag">太空站</span></div>
+          <p>封闭空间内的观测站事故，让成员之间的信任逐渐瓦解。叙事偏冷峻，适合喜欢硬设定和群像冲突的读者。</p>
+          <div class="rec-meta"><span>更新：第6话</span><strong>热度 8.8</strong></div>
+        </div>
+      </article>
+
+      <article class="rec-card card-hover">
+        <div class="rec-cover" style="background:linear-gradient(135deg,#6b5b2e,#c7aa5c);"><span>历史 · 连载中</span></div>
+        <div class="rec-body">
+          <h3>长安夜行录</h3>
+          <div class="tags"><span class="tag">古风探案</span><span class="tag">群像</span><span class="tag hot">讨论高</span></div>
+          <p>以唐代长安为背景的探案单元剧，主线暗线交错。服化道细节和场景描写是亮点，适合喜欢古风悬疑的读者。</p>
+          <div class="rec-meta"><span>更新：第27话</span><strong>热度 9.2</strong></div>
+        </div>
+      </article>
+
+      <article class="rec-card card-hover">
+        <div class="rec-cover" style="background:linear-gradient(135deg,#3e6e4e,#8bc79a);"><span>运动 · 更新稳定</span></div>
+        <div class="rec-body">
+          <h3>逆风跑者</h3>
+          <div class="tags"><span class="tag">运动竞技</span><span class="tag">成长</span><span class="tag rec">追更友好</span></div>
+          <p>从校园田径队替补到地区赛主力的成长故事，训练细节和比赛节奏兼备。适合喜欢热血竞技和团队羁绊的读者。</p>
+          <div class="rec-meta"><span>更新：第20话</span><strong>热度 8.9</strong></div>
+        </div>
+      </article>
+
+      <article class="rec-card card-hover">
+        <div class="rec-cover" style="background:linear-gradient(135deg,#6e4a2e,#c49b6f);"><span>美食 · 单元剧</span></div>
+        <div class="rec-body">
+          <h3>深夜食肆</h3>
+          <div class="tags"><span class="tag">美食日常</span><span class="tag">治愈</span><span class="tag">短篇集</span></div>
+          <p>以一家夜间小馆为舞台，每话用一道菜串起一位客人的故事。阅读门槛低，适合碎片时间随手翻看。</p>
+          <div class="rec-meta"><span>更新：第16话</span><strong>热度 8.7</strong></div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= 最新更新 ================= -->
+<section class="section" id="update" aria-labelledby="updateTitle">
+  <div class="container">
+    <div class="section-head">
+      <h2 id="updateTitle">漫蛙漫画最新更新动态</h2>
+      <p>更新时间以 2026年11月7日 为参考，方便追更读者核对进度</p>
+    </div>
+    <div class="update-list">
+      <div class="update-item"><span class="update-num">01</span><div><strong>深海回声</strong><small>第14话「潮汐下的证词」已上线，主线线索开始收束。</small></div><span class="update-time">11-07</span></div>
+      <div class="update-item"><span class="update-num">02</span><div><strong>剑与晨星</strong><small>第31话更新，边境篇进入高潮，新角色登场。</small></div><span class="update-time">11-07</span></div>
+      <div class="update-item"><span class="update-num">03</span><div><strong>夏日便利店</strong><small>番外篇第2话上线，讲述常客之间的旧日回忆。</small></div><span class="update-time">11-06</span></div>
+      <div class="update-item"><span class="update-num">04</span><div><strong>雾之国魔法使</strong><small>第22话更新，古代术式的代价被揭开。</small></div><span class="update-time">11-06</span></div>
+      <div class="update-item"><span class="update-num">05</span><div><strong>放学后的第三排</strong><small>第18话上线，值日小组的关系出现新变化。</small></div><span class="update-time">11-05</span></div>
+      <div class="update-item"><span class="update-num">06</span><div><strong>零号观测站</strong><small>第6话更新，观测站通讯恢复后出现异常信号。</small></div><span class="update-time">11-05</span></div>
+      <div class="update-item"><span class="update-num">07</span><div><strong>长安夜行录</strong><small>第27话「灯市疑云」上线，单元案件与主线交汇。</small></div><span class="update-time">11-04</span></div>
+      <div class="update-item"><span class="update-num">08</span><div><strong>逆风跑者</strong><small>第20话更新，地区预选赛名单公布。</small></div><span class="update-time">11-04</span></div>
+      <div class="update-item"><span class="update-num">09</span><div><strong>深夜食肆</strong><small>第16话上线，本期主题为“冬夜的一碗汤”。</small></div><span class="update-time">11-03</span></div>
+      <div class="update-item"><span class="update-num">10</span><div><strong>新作预告：纸上剧院</strong><small>预计11月中旬上线，主打悬疑与舞台群像。</small></div><span class="update-time">11-03</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 深度解析 ================= -->
+<section class="section" id="deep" aria-labelledby="deepTitle" style="background:var(--bg-deep);">
+  <div class="container">
+    <div class="article-shell">
+      <h2 id="deepTitle">漫蛙漫画深度解析：从推荐逻辑到阅读体验</h2>
+      <p>很多读者搜索“漫蛙漫画”时，真正想找的并不是单一作品，而是一个能快速判断“看什么、值不值得追、更新到哪”的内容入口。漫蛙漫画这一专题页围绕这个需求，把热门推荐、分类筛选、更新动态和深度内容放在同一条浏览路径上。你可以在首屏看到近期讨论度高的作品，再通过分类入口缩小范围，最后用正文和FAQ确认阅读顺序与更新节奏。</p>
+      <h3>类型分布与内容特点</h3>
+      <p>从当前整理的内容看，漫蛙漫画相关作品大致分布在悬疑、热血冒险、日常治愈、奇幻设定和校园恋爱几个方向。悬疑类更强调氛围和线索回收，适合连续阅读；热血冒险类重视战斗分镜和成长节奏，追更体验更明显；日常治愈类多为单元剧结构，随时插入阅读也不影响理解。奇幻和科幻类则更依赖世界观设定，需要读者对术语和背景有一定耐心。</p>
+      <h3>人物与叙事吸引力</h3>
+      <p>漫蛙漫画专题里推荐的作品，大多在人物关系上做了较细的处理。例如海边小城的调查者并非全能型主角，他的犹豫和判断失误反而推动了剧情；边境剑士的伙伴关系也不是一蹴而就，而是在一次次任务中逐渐建立。这种人物弧光让作品在类型套路之外多了一层可读性。对于喜欢角色讨论的读者，专题页中的评论区和FAQ也能提供不同视角。</p>
+      <blockquote>阅读建议：先看更新频率，再看类型标签，最后决定是否追更。漫蛙漫画专题页把这三类信息放在同一屏内，减少反复跳转。</blockquote>
+      <h3>节奏与消费体验</h3>
+      <p>漫画阅读和长视频不同，单话信息密度和断点位置会直接影响追更体验。漫蛙漫画推荐卡片中标注了更新话数和热度，目的不是制造榜单焦虑，而是帮助读者判断作品是否适合自己。偏爱一口气读完的读者，可以优先选择已完结或单元剧结构的作品；习惯追更的读者，则更适合关注更新稳定的连载。</p>
+      <h3>适合人群与同类比较</h3>
+      <p>如果你喜欢氛围感强的悬疑故事，可以关注《深海回声》这一类作品；如果更看重热血成长和团队羁绊，《剑与晨星》《逆风跑者》更合适；日常治愈向读者则可以从《夏日便利店》《深夜食肆》入手。漫蛙漫画专题页并不试图替所有人做决定，而是把类型、更新和读者反馈摆出来，让不同偏好的读者都能找到自己的入口。</p>
+      <p>另外，搜索“漫蛙漫画”的读者常见需求还包括：哪里能看到更新提醒、热门作品有没有阅读顺序、新作值不值得追。针对这些意图，页面在FAQ和资讯模块中补充了更新关注点和同类推荐，方便首次访问的读者快速建立自己的阅读清单。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 数据看板 / 阅读体验 ================= -->
+<section class="section" id="guide" aria-labelledby="guideTitle">
+  <div class="container">
+    <div class="section-head">
+      <h2 id="guideTitle">漫蛙漫画阅读指南与体验说明</h2>
+      <p>页面结构、分类筛选和移动端阅读体验说明</p>
+    </div>
+    <div class="metrics" style="margin-bottom:28px;">
+      <div class="metric"><strong>9+</strong><span>热门作品卡片</span></div>
+      <div class="metric"><strong>8</strong><span>题材分类入口</span></div>
+      <div class="metric"><strong>10</strong><span>近期更新动态</span></div>
+      <div class="metric"><strong>6</strong><span>常见问题解答</span></div>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-card">
+        <h3>分类筛选是否方便？</h3>
+        <p>漫蛙漫画页面按题材设置快捷入口，悬疑、热血、恋爱、奇幻等分类都可以直接跳转，减少在长列表中反复翻找的时间。</p>
+      </div>
+      <div class="faq-card">
+        <h3>移动端阅读体验如何？</h3>
+        <p>卡片和正文在手机端自动变为单列布局，搜索框和按钮也会调整为全宽，适合通勤或碎片时间浏览。</p>
+      </div>
+      <div class="faq-card">
+        <h3>适合追更还是补番？</h3>
+        <p>两类读者都能使用。更新列表适合追更读者核对进度，推荐卡片和深度解析则方便补番读者快速了解作品类型和看点。</p>
+      </div>
+      <div class="faq-card">
+        <h3>相关推荐能否扩展浏览？</h3>
+        <p>热门推荐、评论和资讯模块之间互相呼应，读者可以从一部作品扩展到同类型作品，也可以顺着更新动态继续浏览。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="section" id="faq" aria-labelledby="faqTitle" style="background:var(--bg-deep);">
+  <div class="container">
+    <div class="section-head">
+      <h2 id="faqTitle">漫蛙漫画常见问题</h2>
+      <p>围绕类型选择、更新关注和阅读顺序整理</p>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-card">
+        <h3>漫蛙漫画专题页主要收录什么内容？</h3>
+        <p>主要收录热门漫画推荐、分类入口、更新动态、深度解析和读者评论。它不是单一作品页，而是帮助读者判断“看什么、追哪部、更新到哪”的内容入口。</p>
+      </div>
+      <div class="faq-card">
+        <h3>第一次浏览应该从哪里开始？</h3>
+        <p>建议先看首屏编辑速览和热门推荐，确认自己偏好的类型；再用分类入口缩小范围，最后看更新列表和FAQ确认阅读顺序。这样比直接翻长列表更高效。</p>
+      </div>
+      <div class="faq-card">
+        <h3>热门作品和最新更新有什么区别？</h3>
+        <p>热门推荐侧重讨论度和类型完成度，适合选择“下一部看什么”；最新更新侧重章节进度和上线时间，适合已经在追更的读者核对进度。</p>
+      </div>
+      <div class="faq-card">
+        <h3>悬疑和热血类作品适合哪些读者？</h3>
+        <p>悬疑类适合喜欢氛围、线索和反转的读者，阅读时建议连续看几话；热血冒险类适合喜欢战斗分镜和成长线的读者，追更体验更明显。</p>
+      </div>
+      <div class="faq-card">
+        <h3>有没有适合碎片时间阅读的类型？</h3>
+        <p>日常治愈和美食单元剧通常单话完整，适合通勤或睡前阅读。漫蛙漫画专题中的《夏日便利店》《深夜食肆》都属于阅读门槛较低的类型。</p>
+      </div>
+      <div class="faq-card">
+        <h3>如何关注漫蛙漫画的更新提醒？</h3>
+        <p>可以收藏本专题页，或关注页面中的更新列表和资讯模块。更新动态会标注日期和话数，便于读者自行安排追更节奏。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 用户评论 ================= -->
+<section class="section" id="review" aria-labelledby="reviewTitle">
+  <div class="container">
+    <div class="section-head">
+      <h2 id="reviewTitle">漫蛙漫画读者评论</h2>
+      <p>来自近期浏览者的真实语气短评，包含推荐、讨论和中性反馈</p>
+    </div>
+    <div class="comment-grid">
+      <div class="comment-card"><div class="comment-head"><span class="avatar">阿</span><strong>阿澈</strong><small>11-07</small></div><p>《深海回声》的氛围真的不错，最近几话信息量很大，建议不要跳着看。</p></div>
+      <div class="comment-card"><div class="comment-head"><span class="avatar">橘</span><strong>橘子汽水</strong><small>11-06</small></div><p>漫蛙漫画这个专题页的分类挺清楚的，我直接按热血找到《剑与晨星》，省了不少时间。</p></div>
+      <div class="comment-card"><div class="comment-head"><span class="avatar">林</span><strong>林间有风</strong><small>11-06</small></div><p>《夏日便利店》适合睡前看，但更新有点慢，希望番外能多更几话。</p></div>
+      <div class="comment-card"><div class="comment-head"><span class="avatar">深</span><strong>深巷猫</strong><small>11-05</small></div><p>悬疑类推荐里《零号观测站》目前话数还少，先收藏了，等养肥再看。</p></div>
+      <div class="comment-card"><div class="comment-head"><span class="avatar">北</span><strong>北岸</strong><small>11-05</small></div><p>《长安夜行录》的单元案件写得不错，主线推进稍慢，但画风很稳。</p></div>
+      <div class="comment-card"><div class="comment-head"><span class="avatar">小</span><strong>小满</strong><small>11-04</small></div><p>漫蛙漫画热门榜里几部我都在追，更新列表这个设计很实用，不用一话话点开看。</p></div>
+      <div class="comment-card"><div class="comment-head"><span class="avatar">七</span><strong>七号读者</strong><small>11-04</small></div><p>《雾之国魔法使》设定有点复杂，前几话需要耐心，后面会越来越顺。</p></div>
+      <div class="comment-card"><div class="comment-head"><span class="avatar">梨</span><strong>梨涡</strong><small>11-03</small></div><p>恋爱类的《放学后的第三排》节奏偏慢，喜欢快节奏的可能会觉得温吞，但画风好看。</p></div>
+      <div class="comment-card"><div class="comment-head"><span class="avatar">夜</span><strong>夜航船</strong><small>11-03</small></div><p>希望专题页以后能加一个完结作品筛选，追更等更新实在有点难熬。</p></div>
+      <div class="comment-card"><div class="comment-head"><span class="avatar">山</span><strong>山茶</strong><small>11-02</small></div><p>《逆风跑者》比赛分镜有燃点，训练日常也不敷衍，适合喜欢运动题材的读者。</p></div>
+      <div class="comment-card"><div class="comment-head"><span class="avatar">青</span><strong>青岚</strong><small>11-02</small></div><p>我是从评论区被安利到《深海回声》的，看完前五话确实值得追。</p></div>
+      <div class="comment-card"><div class="comment-head"><span class="avatar">老</span><strong>老书虫</strong><small>11-01</small></div><p>漫蛙漫画专题的推荐文案比较克制，没有过度吹，这点比很多榜单舒服。</p></div>
+      <div class="comment-card"><div class="comment-head"><span class="avatar">果</span><strong>果冻</strong><small>10-31</small></div><p>《深夜食肆》适合放松看，每话一个故事，不用担心忘了前面的剧情。</p></div>
+      <div class="comment-card"><div class="comment-head"><span class="avatar">远</span><strong>远方来信</strong><small>10-30</small></div><p>分类入口如果能再多一个“完结”标签就好了，现在按题材找还是要自己判断。</p></div>
+      <div class="comment-card"><div class="comment-head"><span class="avatar">十</span><strong>十一</strong><small>10-29</small></div><p>《剑与晨星》新章节奏很快，战斗场面有进步，希望别高开低走。</p></div>
+      <div class="comment-card"><div class="comment-head"><span class="avatar">白</span><strong>白桃</strong><small>10-28</small></div><p>漫蛙漫画的更新动态标注了日期和话数，核对进度很方便，已经收藏页面。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 相关资讯 ================= -->
+<section class="section" id="news" aria-labelledby="newsTitle" style="background:var(--bg-deep);">
+  <div class="container">
+    <div class="section-head">
+      <h2 id="newsTitle">漫蛙漫画相关资讯</h2>
+      <p>围绕作品动态、类型趋势和更新节奏整理的资讯卡片</p>
+    </div>
+    <div class="news-grid">
+      <article class="news-card card-hover">
+        <time datetime="2026-11-07">2026-11-07</time>
+        <h3>《深海回声》进入主线收束阶段</h3>
+        <p>第14话上线后，旧案线索与失踪事件开始交汇。对追更读者来说，接下来几话将是信息量较大的段落。</p>
+      </article>
+      <article class="news-card card-hover">
+        <time datetime="2026-11-06">2026-11-06</time>
+        <h3>热血冒险类新章密集更新</h3>
+        <p>《剑与晨星》《逆风跑者》等作品近期更新稳定，适合想找连续追更体验的读者关注。</p>
+      </article>
+      <article class="news-card card-hover">
+        <time datetime="2026-11-05">2026-11-05</time>
+        <h3>悬疑新作《零号观测站》讨论升温</h3>
+        <p>封闭空间设定和群像冲突让这部新作在评论区获得不少关注，目前更新至第6话，适合养肥后阅读。</p>
+      </article>
+      <article class="news-card card-hover">
+        <time datetime="2026-11-04">2026-11-04</time>
+        <h3>古风探案《长安夜行录》单元案件获好评</h3>
+        <p>近期更新的“灯市疑云”篇把单元案件和主线暗线结合得更紧，场景描写成为读者讨论重点。</p>
+      </article>
+      <article class="news-card card-hover">
+        <time datetime="2026-11-03">2026-11-03</time>
+        <h3>日常治愈类作品适合碎片阅读</h3>
+        <p>《夏日便利店》《深夜食肆》保持单元剧结构，每话独立成篇，适合通勤和睡前阅读。</p>
+      </article>
+      <article class="news-card card-hover">
+        <time datetime="2026-11-02">2026-11-02</time>
+        <h3>漫蛙漫画专题页更新阅读指南</h3>
+        <p>页面新增更新列表和FAQ模块，帮助首次访问的读者更快找到类型入口和追更信息。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 订阅引导 ================= -->
+<section class="section" id="subscribe" aria-labelledby="subTitle">
+  <div class="container">
+    <div class="subscribe-band">
+      <div>
+        <h2 id="subTitle">收藏漫蛙漫画专题，追更不迷路</h2>
+        <p>热门推荐、更新动态和深度解析会持续整理，适合漫画读者长期收藏。</p>
+      </div>
+      <form class="subscribe-form" onsubmit="return false;" aria-label="订阅更新提醒">
+        <input type="email" placeholder="输入邮箱，接收更新提醒" aria-label="邮箱">
+        <button class="btn" type="submit">订阅</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= 页脚 ================= -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>漫蛙漫画</h4>
+        <p>一个围绕漫画推荐、更新追踪和类型解析整理的内容专题页。聚合热门作品、分类入口、读者评论和资讯动态，方便漫画读者快速建立阅读清单。</p>
+      </div>
+      <div>
+        <h4>栏目导航</h4>
+        <ul>
+          <li><a href="/#hot">热门推荐</a></li>
+          <li><a href="/#update">最新更新</a></li>
+          <li><a href="/#category">分类索引</a></li>
+          <li><a href="/#deep">深度解析</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>阅读帮助</h4>
+        <ul>
+          <li><a href="/#guide">阅读指南</a></li>
+          <li><a href="/#faq">常见问题</a></li>
+          <li><a href="/#review">读者评论</a></li>
+          <li><a href="/#news">漫画资讯</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>友情链接</h4>
+        <ul>
+          <li><a href="/#top">内容首页</a></li>
+          <li><a href="/#hot">作品推荐</a></li>
+          <li><a href="/#update">更新日历</a></li>
+          <li><a href="/#subscribe">订阅提醒</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 漫蛙漫画内容专题页 · 内容整理与推荐仅供参考</span>
+      <span>免责声明：本站为内容聚合与推荐页面，作品版权归原作者及平台所有。</span>
+    </div>
+  </div>
+</footer>
+
+<!-- 移动端菜单简单交互 -->
+<script>
+(function(){
+  var btn=document.querySelector('.menu-toggle');
+  var nav=document.querySelector('.nav-links');
+  if(btn&&nav){
+    btn.addEventListener('click',function(){
+      if(nav.style.display==='flex'){nav.style.display='none';}
+      else{nav.style.display='flex';nav.style.position='absolute';nav.style.top='60px';nav.style.left='0';nav.style.right='0';nav.style.background='#fff';nav.style.padding='14px 20px';nav.style.flexDirection='column';nav.style.alignItems='flex-start';nav.style.boxShadow='0 12px 30px rgba(24,37,63,.12)';nav.style.zIndex='60';}
+    });
+  }
+})();
+</script>
+</body>
+                                                                                                                                      </html>
